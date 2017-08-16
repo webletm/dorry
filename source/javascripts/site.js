@@ -9,7 +9,7 @@
 			arrows: true
 		});
 
-		$('#nav a').on('click', function(a){
+		$('#nav a, #scrollerbtn').on('click', function(a){
 			a.preventDefault();
 			var $el = $(this).attr('href');
 			$('html, body').animate({
