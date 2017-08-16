@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+        <!-- Use the title from a page's frontmatter if it has one -->
+        <title><%= current_page.data.title || "Middleman" %></title>
+        <%= stylesheet_link_tag "font-awesome" %>
+        <%= stylesheet_link_tag "jquery-ui-min" %>
+        <%= stylesheet_link_tag "jquery-ui-structure-min" %>
+        <%= stylesheet_link_tag "site" %>
+        <%= javascript_include_tag "jquery" %>
+        <%= javascript_include_tag "jquery-ui-min" %>
+        <%= javascript_include_tag "slick" %>
+        <%= javascript_include_tag "site" %>
+        <script src="https://use.typekit.net/eqn1bii.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+    <body>
+    <header class="header wrapper">
+        <div class="social">
+            <a href="#">
+                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+        <h1 id="logo">
+            <img src="/images/logo.svg" alt="Win big risk small" />
+        </h1>
+        <a href="javascript:void(0);" class="mobile" id="menu-btn"></a>
+        <nav id="nav">
+            <a href="#banner">Overview</a>
+            <a href="#author">Author</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#purchase">Shop</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="content" class="wrapper">
+        <%= yield %>
+    </div>
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="#">
+                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </nav>
+        <p>Copyright &copy; 2017 - All rights reserved</p>
+    </footer>
+    </body>
+</html>
